@@ -1,0 +1,3 @@
+Danes na menuju je: 
+jed: glavna jed cena: 5.6EUR
+jed: juha cena: 2.5EUR
