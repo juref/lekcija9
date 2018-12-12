@@ -26,7 +26,7 @@ for key, value in todo_list.iteritems():
     if value == "ne":
         print k
 
-todo_file = open("todo.txt", "w+") # "w+" odpri za pisanje
+todo_file = open("./txt/todo.txt", "w+") # "w+" odpri za pisanje
 todo_file.write("Končana opravila\n")
 for k, v in todo_list.iteritems():
     if v == "da":

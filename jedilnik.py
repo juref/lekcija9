@@ -15,7 +15,7 @@ while True:
     if new == "ne":
         break
 
-todo_file = open("menu.txt", "w+") # "w+" odpri za pisanje
+todo_file = open("./_txt/menu.txt", "w+") # "w+" odpri za pisanje
 todo_file.write("Danes na menuju je: \n")
 for k, v in jedilnik.iteritems():
         todo_file.write("jed: " + k + " cena: " + v + " EUR" + "\n")

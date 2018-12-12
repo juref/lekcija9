@@ -46,7 +46,7 @@ matej = {
     "race": race.white,
     "hair": hairColor.black,
     "eye": eyeColor.blue,
-    "face": facialShape.oval
+    "face": facialShape.square
 }
 
 miha = {
@@ -58,6 +58,7 @@ miha = {
 }
 
 # suspects = [eva, larisa, matej, miha]                  # probal z listo, pa nikakor ne morem izpisati imena, ker mi izpisuje vrednosti za ime!
+
 suspects = {                                             # slovar slovarjev :)
     "Eva": eva,
     "Larisa": larisa,
@@ -66,7 +67,7 @@ suspects = {                                             # slovar slovarjev :)
 }
 
 print "\nOseba, ki ti je pojedla sladoled ima spodnji DNA zapis: \n"
-dna_file = open("dna.txt", "r")
+dna_file = open("./_txt/dna.txt", "r")
 dna = dna_file.read()
 dna_file.close()
 
@@ -80,10 +81,12 @@ for name, name_list in suspects.iteritems():             # gre čez vsa imena in
             print car + " (" + val + ")" + " = match"
             perpetrator = name
         else:
+            print car + " (" + val + ")" + " = NO match"
             perpetrator = ""                             # če se ne ujema resetira variable
+            break                                        # Zelo pomemben breake!!! Če tu ni breake, vrne za storilca Mateja, ker ima zadnji parameter, ki se ujema z DNA in zato vpiše ime v varable. S tem breakeom nehamo testirati ob prvem neskladju!
     if perpetrator:                                      # če se ujemajo vsi pogoji ima ima ergo ni prazen zato zaključi iskanje
+        print "\nPrekini test. Storilec je znan! Vsi DNA parametri se ujemajo!"
         perpetrator != ""
-        print "\nPrekini test. Storilec je najden! Vsi DNA parametri se ujemajo!"
         break
 
 print "\nStorilec je %s!" % perpetrator

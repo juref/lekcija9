@@ -66,7 +66,7 @@ suspects = {                                             # slovar slovarjev :)
 }
 
 print "\nOseba, ki ti je pojedla sladoled ima spodnji DNA zapis: \n"
-dna_file = open("dna.txt", "r")
+dna_file = open("./_txt/dna.txt", "r")
 dna = dna_file.read()
 dna_file.close()
 
